@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav {
+  width: 100%;
+  padding: 10px 150px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #345c98;
+  position: fixed;
+  color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav #site-logo {
+  height: 10vh;
+}
+
+nav .menu-list {
+  display: flex;
+  gap: 5rem;
+}
+
+nav .menu-list .menu {
+  color: white;
+  transition: 0.3s ease;
+  padding: 20px 0;
+}
+
+nav .menu-list .menu:hover {
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  padding: 6px 0;
+}
+
+.button-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  display: inline-block;
+  cursor: pointer;
+  display: none;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1100px) {
+  nav {
+    padding: 10px 30px;
+    transition: 0.5s;
+  }
+
+  .button-section {
+    display: block;
+    z-index: 1000;
+  }
+
+  nav .menu-list.open {
+    display: flex;
+    z-index: 999;
+  }
+
+  nav .menu-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.549);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 200px 50px;
+  }
+
+  nav .menu-list .menu {
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  nav .menu-list {
+    width: 100%;
+  }
+}
