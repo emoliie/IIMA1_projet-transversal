@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+.content-section {
+  padding: 130px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fddb88;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Grandstander", sans-serif;
+  font-weight: 800;
+  color: white;
+}
+
+p {
+  text-align: justify;
+  color: white;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.banner-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.banner #title-banner {
+  width: 100vw;
+}
+
+.discover-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 140px;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  letter-spacing: 0.7px;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  background-color: #78d1c4;
+  box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%),
+    0 1px 3px 0 rgb(93 100 148 / 20%);
+  transition: all 0.2s ease-out;
+  font-size: 16px;
+  margin: 1rem;
+  align-self: center;
+}
+
+.discover-btn:hover {
+  box-shadow: 0 8px 22px 0 rgb(37 44 97 / 15%),
+    0 4px 6px 0 rgb(93 100 148 / 20%);
+  height: 55px;
+  width: 145px;
+}
+
+.scallop-up {
+  margin-top: 100px;
+  height: 25px;
+  width: 100%;
+  background: -webkit-gradient(
+    radial,
+    50% 100%,
+    10,
+    50% 100%,
+    40,
+    from(#f3906b),
+    color-stop(0.49, #f3906b),
+    color-stop(0.51, #fddb88),
+    to(#fddb88)
+  );
+  -webkit-background-size: 49px 100%;
+  background-size: 49px 100%;
+}
+
+.content-section .studios {
+  width: 100%;
+  background-color: #f3906b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  padding: 5rem 15vw;
+}
+
+.content-section h3 {
+  font-weight: 600;
+  align-self: center;
+  text-align: center;
+}
+
+.content-section .studios .agence-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+
+.text-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --text-divider-gap: 1rem;
+}
+
+.text-divider::before,
+.text-divider::after {
+  content: "";
+  height: 2px;
+  flex-grow: 1;
+  background-color: white;
+}
+
+.text-divider::before {
+  margin-right: var(--text-divider-gap);
+}
+
+.text-divider::after {
+  margin-left: var(--text-divider-gap);
+}
+
+.content-section .studios #agence .affiches {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.content-section .studios #agence .affiches div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content-section .studios #agence div img {
+  width: 20vw;
+  box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%),
+    0 1px 3px 0 rgb(93 100 148 / 20%);
+}
+
+.content-section .studios .video {
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+/* .content-section .studios #studio3d div iframe {
+  width: 40vw;
+} */
+
+.content-section .studios #studioJV {
+  padding-bottom: 5rem;
+}
+
+.content-section .studios #studioJV .game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content-section .studios #studioJV div img {
+  width: 40vw;
+}
+
+.content-section .studios #studioJV .game .download {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1100px) {
+  .banner-section .banner #title-banner {
+    height: 400px;
+    min-height: 300px;
+    object-fit: cover;
+  }
+
+  .content-section .studios #studio3d div video {
+    width: 70vw;
+  }
+
+  .content-section .studios #agence div img {
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content-section {
+    padding: 113px 0 0;
+  }
+
+  h1 {
+    font-size: 1.5rem
+  }
+
+  .text-divider {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .content-section .studios #agence div img {
+    width: 60vw;
+  }
+
+  .content-section .studios #agence .affiches {
+    flex-wrap: wrap;
+  }
+}

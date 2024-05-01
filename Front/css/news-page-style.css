@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap");
+
+.content-section {
+  padding: 130px 0 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fddb88;
+  gap: 10vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Grandstander", sans-serif;
+  font-weight: 800;
+  color: #345c98;
+}
+
+p {
+  text-align: justify;
+  color: #345c98;
+}
+
+.headlines {
+  height: 65vh;
+  width: 90vw;
+  margin-top: 10vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.headlines h2 {
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  position: relative; /*pour positionner le texte devant le bg image dans le pseudo-element qui est en position absolute*/
+}
+
+.headlines p {
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.headlines .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.headlines .left .top {
+  position: relative;
+  height: 60%;
+  cursor: pointer;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.2s ease-out;
+  background-color: black;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.headlines .left .top::before {
+  content: ""; /*ne fonctionnera pas sinon*/
+  position: absolute;
+  /*important de mettre la meme taille que le parent*/
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url(../images/article1.png);
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.headlines .left .top:hover {
+  background-color: #345c98;
+}
+
+.headlines .left .bottom {
+  position: relative;
+  background-color: black;
+  height: 40%;
+  cursor: pointer;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.2s ease-out;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.headlines .left .bottom::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url(../images/article3.png);
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.headlines .left .bottom:hover {
+  background-color: #345c98;
+}
+
+.headlines .right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.headlines .right .top {
+  height: 40%;
+  display: flex;
+  gap: 1rem;
+}
+
+.headlines .right .bottom {
+  position: relative;
+  background-color: black;
+  height: 60%;
+  cursor: pointer;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.2s ease-out;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.headlines .right .bottom::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url(../images/article2.png);
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.headlines .right .bottom:hover {
+  background-color: #345c98;
+}
+
+.headlines .right .top .top-left {
+  position: relative;
+  background-color: black;
+  width: 50%;
+  cursor: pointer;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.2s ease-out;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.headlines .right .top .top-left::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url(../images/article4.png);
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.headlines .right .top .top-left:hover {
+  background-color: #345c98;
+}
+
+.headlines .right .top .top-right {
+    position: relative;
+    background-color: black;
+  width: 50%;
+  cursor: pointer;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.2s ease-out;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.headlines .right .top .top-right::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url(../images/article5.png);
+    background-size: cover;
+    opacity: 0.5;
+  }
+  
+
+.headlines .right .top .top-right:hover {
+  background-color: #345c98;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  gap: 2rem;
+  margin-bottom: 10vh;
+}
+
+.articles h2 {
+  font-size: 2rem;
+}
+
+.articles .articles-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+}
+
+.articles .articles-list a {
+  display: flex;
+  gap: 0.5rem;
+  width: 300px;
+}
+
+.articles .articles-list a .number {
+  font-size: 2rem;
+  color: #f50049;
+}
+
+.articles .articles-list a .article {
+  text-align: left;
+  color: #345c98;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1100px) {
+  .headlines {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 0;
+  }
+
+  .headlines p {
+    font-size: 1rem;
+  }
+
+  .headlines .left {
+    width: 100%;
+    height: 100%;
+  }
+
+  .headlines .left .top {
+    height: 50%;
+  }
+
+  .headlines .left .bottom {
+    height: 50%;
+  }
+
+  .headlines .right {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .articles .articles-list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .headlines p {
+    display: none;
+  }
+
+}
