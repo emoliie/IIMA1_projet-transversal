@@ -5,7 +5,7 @@ const message = document.getElementById("message");
 newsletter.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const response = await fetch("http://127.0.0.1:3000/newsletters", {
+  const response = await fetch("http://127.0.0.1:3000/newsletter", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

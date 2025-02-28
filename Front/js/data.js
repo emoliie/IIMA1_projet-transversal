@@ -1,7 +1,7 @@
 const leaderboard = document.getElementById("leaderboard");
 
 async function getPlayer() {
-  const response = await fetch("http://127.0.0.1:3000/games", {
+  const response = await fetch("http://127.0.0.1:3000/game", {
     method: "GET",
   });
 
